@@ -6,12 +6,20 @@ const fs = require('fs');
 let users: UserMock[];
 let books: BookMock[];
 
+/**
+ * Main function to generate all the data
+ * @returns {any} The generated data
+ */
 function generateData(): any {
   users = generateUsers();
   books = generateBooks();
   return { users, books };
 }
 
+/**
+ * Generate a list of users with random data
+ * @returns {UserMock[]}
+ */
 function generateUsers(): UserMock[] {
   const users: UserMock[] = [];
   for (let i = 0; i < 10; i++) {
@@ -20,6 +28,10 @@ function generateUsers(): UserMock[] {
   return users;
 }
 
+/**
+ * Generate a list of books with random data and existing users
+ * @returns {BookMock[]}
+ */
 function generateBooks(): BookMock[] {
   const books: BookMock[] = [];
   for (let i = 0; i < 10; i++) {
@@ -28,6 +40,10 @@ function generateBooks(): BookMock[] {
   return books;
 }
 
+/**
+ * Create a JSON file with the generated data.
+ * The file will be used by json-server to mock API calls
+ */
 try {
   fs.writeFileSync(
     './src/mock/db.json',

@@ -2,6 +2,9 @@ import { faker } from '@faker-js/faker';
 import { Book } from 'src/models/book.model';
 import { User } from 'src/models/user.model';
 
+/**
+ * Mock class for Book
+ */
 export class BookMock implements Book {
   id: string;
   name: string;

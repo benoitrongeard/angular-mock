@@ -1,6 +1,9 @@
 import { faker } from '@faker-js/faker';
 import { User } from 'src/models/user.model';
 
+/**
+ * Mock class for User
+ */
 export class UserMock implements User {
   id: string;
   firstName: string;
