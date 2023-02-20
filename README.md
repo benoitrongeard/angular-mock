@@ -2,6 +2,24 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.6.
 
+## Packages uses in this project
+
+- Angular 15
+- fakerjs
+- json-server (npm install -g json-server)
+
+## Generate database json
+
+```shell
+ts-node src/mock/main.ts
+```
+
+## Run json-server
+
+```shell
+json-server --watch src/mock/db.json
+```
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
