@@ -42,4 +42,4 @@ testem.log
 Thumbs.db
 
 # Mock database
-src/mock/db.json
+database/db.json

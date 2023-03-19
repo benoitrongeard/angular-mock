@@ -46,7 +46,7 @@ function generateBooks(): BookMock[] {
  */
 try {
   fs.writeFileSync(
-    './src/mock/db.json',
+    './database/db.json',
     JSON.stringify(generateData(), null, 2)
   );
   console.log('JSON Databse created');

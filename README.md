@@ -11,13 +11,13 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Generate database json
 
 ```shell
-ts-node src/mock/main.ts
+npx ts-node src/mock/main.ts
 ```
 
 ## Run json-server
 
 ```shell
-json-server --watch src/mock/db.json
+npx json-server --watch database/db.json
 ```
 
 ## Development server
