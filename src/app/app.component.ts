@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { User } from 'src/models/user.model';
+import { UserService } from 'src/services/user.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-mock';
+
+  users: User[] = [];
+
+  constructor(private userService: UserService) {
+    // this.userService.getUsers().subscribe(res => this.users = res, err => console.error(err.message));
+  }
 }
