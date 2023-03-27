@@ -6,8 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientMock } from 'src/core/http-client-mock.service';
 import { HttpClientAPI } from 'src/core/http-client-api.service';
-
-const mock = false;
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -22,7 +21,7 @@ const mock = false;
     // Instantiate the mock client if mock is true, otherwise instantiate the api client
     {
       provide: HttpClientAPI,
-      useClass: mock ? HttpClientMock : HttpClientAPI
+      useClass: environment.mock ? HttpClientMock : HttpClientAPI
     }
   ],
   bootstrap: [AppComponent]
